@@ -1,4 +1,4 @@
 const Home = ()=>{
-  return<h1>welcome to home page</h1>
+  return<h1 className="common_heading">welcome to home page</h1>
 }
 export default Home;
