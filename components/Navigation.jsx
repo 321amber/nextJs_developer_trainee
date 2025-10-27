@@ -13,6 +13,12 @@ const Navigation = () => {
                 <Link href="/about">about</Link>
              </li>
              <li>
+                <Link href="/clientcomp">client comp</Link>
+             </li>
+             <li>
+                <Link href="/servercomp">server comp</Link>
+             </li>
+             <li>
                 <Link href="/contacts">contacts</Link>
              </li>
              <li>
