@@ -1,13 +1,11 @@
-const DatafetchServer = async (props)=>{
+import DataCard from "./DataCard";
+import {Suspense} from "react";
 
-    const searchParams = await props.searchParams;
+const DatafetchServer = async (props)=>{
+       const searchParams = await props.searchParams;
     const username = searchParams.name;
 
-    const res = await fetch(`https://api.genderize.io/?name=${username}`);
-    const data = await res.json();
-    console.log(data);
-    
-    if(!username){
+       if(!username){
         return(
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white p-6">
 <div className="w-full max-w-md">
@@ -23,12 +21,16 @@ const DatafetchServer = async (props)=>{
 </div>
       )
        }
+    
     return (
-        <div>
-    <h1>data fetching {data.name}</h1>
-    <p>gender: {data.gender}</p>
-    <p>confidential Percantage: {data.probability * 100}</p>
-    </div>
+        <div className="grid grid-cols-2 h-full gap-3">
+            <div className="h-full flex justify-center items-center">
+                This component is defining suspense not for full loading list this part will be static, loading part will appear somewhere.
+            </div>
+            <Suspense fallback={<div>Loading...</div>}>
+            <DataCard username={username}/>
+            </Suspense>
+        </div>
     )
 }
 export default DatafetchServer;
