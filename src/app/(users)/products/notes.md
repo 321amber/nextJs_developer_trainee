@@ -96,6 +96,31 @@ all set.
 Go back to previous url form useRouter()-> inside the go back button, onclick handle: router.back(). history stack se previous url par chla jayega. (only for client component).
 
 
+revalidate path-> when we fill a form and after getting the data from databse, we want to direct get the data updated on a particular page, we use revalidatePath("/pageName"), then data will be updated, otherwise we need to refresh the page again.
+
+
+Framer Motion: we can only use it in client component.
+
+
+
+
+Shadcn UI: 
+it is not a traditional installation library or framework like material UI or Bootstrap, instead it is a unique approach to UI development, that provides a collection of beautifully designed, accessible react components, and a code distribution platform, that lets you copy the source code for individual components directly into your own project, rather than importing from an npm package.
+
+
+
+
+Dialogue and Model in Next/React: with shadcn UI
+Dialogue-> A centered modal wihdow that overlays the entire screen and demands user attention.
+
+common usage: 
+-Confirmation propmts (are you sure?)
+-Forms (login, logout, register, feedback)
+-important alert that need action before continuing
+-detailed content previews (images, videos)
+-Onboarding steps
+
+
 
 
 
